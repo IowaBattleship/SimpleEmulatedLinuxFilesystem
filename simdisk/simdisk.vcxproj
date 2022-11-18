@@ -139,7 +139,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp" />
+    <ClCompile Include="command.cpp" />
+    <ClCompile Include="diskio.cpp" />
+    <ClCompile Include="initialization.cpp" />
+    <ClCompile Include="shellio.cpp" />
+    <ClCompile Include="simdisk.cpp" />
+    <ClCompile Include="structure.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="command.h" />
+    <ClInclude Include="diskio.h" />
+    <ClInclude Include="initialization.h" />
+    <ClInclude Include="shellio.h" />
+    <ClInclude Include="simdisk.h" />
+    <ClInclude Include="structure.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
