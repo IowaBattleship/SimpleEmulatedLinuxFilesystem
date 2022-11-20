@@ -3,6 +3,11 @@
 
 int main()
 {
+	system("title simdisk");
+
+	//创建共享内存
+	createSharedMemory();
+
 	//加载数据 若未存在虚拟硬盘则初始化
 	if (!loadDataFromDisk())
 		return 0;
@@ -56,5 +61,9 @@ int main()
 			}
 		}
 	}
+
+	//关闭共享内存
+	closeSharedMemory();
+
 	return 0;
 }

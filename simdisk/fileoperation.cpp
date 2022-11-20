@@ -126,7 +126,7 @@ void newfile(char pathAndFileName[])
 		{
 			//输入文件内容以确认文件大小
 			char buffer[MAX_FILE_SIZE] = "";
-			shellOutput("\nPlease enter the content of the file (Type \"ENTER\" to terminate - MAX SIZE 4095): \n");
+			shellOutput("\nPlease enter the content of the file (Type \"ENTER\" to terminate - MAX SIZE 1023): \n");
 			shellInput(buffer, MAX_FILE_SIZE);
 
 			//创建该文件

@@ -7,3 +7,4 @@
 #include "directory.h"
 #include "diskmanager.h"
 #include "fileoperation.h"
+#include "sharedmemory.h"

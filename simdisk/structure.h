@@ -25,7 +25,7 @@ constexpr uint INODE_NUM = 1024 * 100; //i节点数量
 
 constexpr uint MAX_FILE_NAME_LEN = 128; //文件名最大长度
 constexpr uint MAX_FILE_NUM = 256; //单个目录下最大文件数量
-constexpr uint MAX_FILE_SIZE = 4096; //单个文件最大大小
+constexpr uint MAX_FILE_SIZE = 1024; //单个文件最大大小
 
 constexpr uint MAX_USER_NAME_LEN = 16; //用户昵称最大长度
 constexpr uint MAX_USER_PASSWORD_LEN = 16; //用户密码最大长度

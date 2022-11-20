@@ -1,8 +1,9 @@
 ﻿#pragma once
-#include "structure.h"
 #include <string>
 #include <iostream>
 #include <sstream>
+#include "structure.h"
+#include "sharedmemory.h"
 
 //shell的输入
 void shellInput(char cmd[], char arg1[], char arg2[], CmdErrors& err); //命令

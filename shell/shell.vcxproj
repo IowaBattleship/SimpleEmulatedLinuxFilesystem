@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{adc969fb-2733-4b0b-bc89-b80b03c7f715}</ProjectGuid>
-    <RootNamespace>simdisk</RootNamespace>
+    <ProjectGuid>{9063f0c7-e44f-493d-bb5b-d886f460e42c}</ProjectGuid>
+    <RootNamespace>shell</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -139,28 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="command.cpp" />
-    <ClCompile Include="directory.cpp" />
-    <ClCompile Include="diskio.cpp" />
-    <ClCompile Include="diskmanager.cpp" />
-    <ClCompile Include="fileoperation.cpp" />
-    <ClCompile Include="initialization.cpp" />
-    <ClCompile Include="sharedmemory.cpp" />
-    <ClCompile Include="shellio.cpp" />
-    <ClCompile Include="simdisk.cpp" />
-    <ClCompile Include="structure.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="command.h" />
-    <ClInclude Include="directory.h" />
-    <ClInclude Include="diskio.h" />
-    <ClInclude Include="diskmanager.h" />
-    <ClInclude Include="fileoperation.h" />
-    <ClInclude Include="initialization.h" />
-    <ClInclude Include="sharedmemory.h" />
-    <ClInclude Include="shellio.h" />
-    <ClInclude Include="simdisk.h" />
-    <ClInclude Include="structure.h" />
+    <ClCompile Include="shell.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
