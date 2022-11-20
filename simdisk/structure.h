@@ -46,7 +46,6 @@ struct SuperBlock {
 
 	SuperBlock(uint _blockSize = 0, uint _blockNum = 0, uint _iNodeNum = 0,
 		uint _freeBlockNum = 0, uint _freeINodeNum = 0, uint _firstDataAddr = 0);
-	void print();
 };
 
 //i节点

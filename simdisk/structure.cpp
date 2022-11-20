@@ -25,16 +25,6 @@ SuperBlock::SuperBlock(uint _blockSize, uint _blockNum, uint _iNodeNum,
 	this->firstDataAddr = _firstDataAddr;
 }
 
-void SuperBlock::print()
-{
-	printf("%u\n", this->blockSize);
-	printf("%u\n", this->blockNum);
-	printf("%u\n", this->iNodeNum);
-	printf("%u\n", this->freeBlockNum);
-	printf("%u\n", this->freeINodeNum);
-	printf("%u\n", this->firstDataAddr);
-}
-
 INode::INode(FileType _fileType, uint _fileUserId, uint _fileSize,
 	uint _fileBlockNum, bool _ifModified, uint _fileAddr, FilePermission _filePermission)
 {
