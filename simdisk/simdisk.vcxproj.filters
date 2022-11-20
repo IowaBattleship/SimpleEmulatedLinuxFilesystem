@@ -33,6 +33,15 @@
     <ClCompile Include="shellio.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="directory.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="diskmanager.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="fileoperation.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="structure.h">
@@ -51,6 +60,15 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="shellio.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="directory.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="diskmanager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="fileoperation.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

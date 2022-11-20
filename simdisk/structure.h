@@ -10,9 +10,13 @@ enum class FileType { FILE, DIRECTORY }; //文件类型 普通文件 or 目录
 
 enum class UserType { ADMIN, GENERAL }; //用户类型
 
-enum class Commands { info, cd, dir, md, rd, newfile, cat, copy, del, check }; //所有命令
+enum class Commands { info, cd, dir, md, rd, newfile, cat,
+	copy, del, check, exit, NOT_FOUND }; //所有命令
 
-//enum calss Errors {  }; //错误类型
+enum class CmdErrors { TOO_MANY_PARAMETERS, WRONG_PARAMETER,
+	MISSING_PARAMETERS, CMD_NOT_FOUND, NONE_ERROR }; //命令错误类型
+
+enum class InfoType { SUPER_BLOCK, INODES, INODE_BITMAP, BLOCK_BITMAP }; //信息类型
 
 
 constexpr uint BLOCK_SIZE = 1024; //盘块大小 1KB
@@ -21,12 +25,13 @@ constexpr uint INODE_NUM = 1024 * 100; //i节点数量
 
 constexpr uint MAX_FILE_NAME_LEN = 128; //文件名最大长度
 constexpr uint MAX_FILE_NUM = 256; //单个目录下最大文件数量
+constexpr uint MAX_FILE_SIZE = 4096; //单个文件最大大小
 
 constexpr uint MAX_USER_NAME_LEN = 16; //用户昵称最大长度
 constexpr uint MAX_USER_PASSWORD_LEN = 16; //用户密码最大长度
 
 constexpr uint MAX_COMMAND_LEN = 256; //命令/路径 最大长度
-constexpr uint MAX_INPUT_LEN = MAX_COMMAND_LEN * 3 + 2;
+constexpr uint MAX_INPUT_LEN = MAX_COMMAND_LEN * 3 + 2; //单行输入最大长度
 
 extern const char* VIRTUAL_DISK; //虚拟硬盘名称
 
@@ -73,6 +78,8 @@ struct Directory {
 	uint iNodeId; //对应的i节点索引
 	uint fileNum; //此目录下的子文件数量
 	FileInterface fileInterface[MAX_FILE_NUM]; //子文件 下标0指向父目录 1指向当前目录
+
+	Directory();
 };
 
 //用户
@@ -97,6 +104,7 @@ extern std::vector<User> users;
 extern bool blockBitmap[BLOCK_NUM]; //盘块位图
 extern bool iNodeBitmap[INODE_NUM]; //i节点位图
 extern std::fstream fsVirtualDisk; //读写虚拟硬盘
+extern bool ifExit; //是否退出
 
 
 constexpr uint SUPER_BLOCK_SIZE = sizeof(SuperBlock); //超级块占用空间大小

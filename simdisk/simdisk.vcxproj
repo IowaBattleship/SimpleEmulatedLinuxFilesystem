@@ -140,7 +140,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="command.cpp" />
+    <ClCompile Include="directory.cpp" />
     <ClCompile Include="diskio.cpp" />
+    <ClCompile Include="diskmanager.cpp" />
+    <ClCompile Include="fileoperation.cpp" />
     <ClCompile Include="initialization.cpp" />
     <ClCompile Include="shellio.cpp" />
     <ClCompile Include="simdisk.cpp" />
@@ -148,7 +151,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="command.h" />
+    <ClInclude Include="directory.h" />
     <ClInclude Include="diskio.h" />
+    <ClInclude Include="diskmanager.h" />
+    <ClInclude Include="fileoperation.h" />
     <ClInclude Include="initialization.h" />
     <ClInclude Include="shellio.h" />
     <ClInclude Include="simdisk.h" />

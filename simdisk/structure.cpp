@@ -12,6 +12,7 @@ std::vector<User> users;
 bool blockBitmap[BLOCK_NUM]; //盘块位图
 bool iNodeBitmap[INODE_NUM]; //i节点位图
 std::fstream fsVirtualDisk; //读写虚拟硬盘
+bool ifExit; //是否退出
 
 SuperBlock::SuperBlock(uint _blockSize, uint _blockNum, uint _iNodeNum,
 	uint _freeBlockNum, uint _freeINodeNum, uint _firstDataAddr)
@@ -50,6 +51,13 @@ FileInterface::FileInterface(const char _fileName[], uint _iNodeId)
 {
 	strcpy_s(this->fileName, _fileName);
 	this->iNodeId = _iNodeId;
+}
+
+Directory::Directory()
+{
+	memset(this->dirName, 0, sizeof(this->dirName));
+	this->fileNum = 0;
+	this->iNodeId = 0;
 }
 
 User::User(const char _userName[], const char _userPassword[],

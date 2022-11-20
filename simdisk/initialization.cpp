@@ -19,7 +19,7 @@ bool loadDataFromDisk()
 	}
 
 	//初始化当前路径为根目录
-	strcpy_s(currentPath, "root/");
+	strcpy_s(currentPath, "root");
 
 	return true;
 }
@@ -137,7 +137,7 @@ bool initAllData()
 		return false;
 
 	//初始化当前路径为根目录
-	strcpy_s(currentPath, "root/");
+	strcpy_s(currentPath, "root");
 
 	shellOutput("Initialized successfully\n");
 	return true;
