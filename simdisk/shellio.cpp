@@ -69,3 +69,17 @@ bool shellInputYN()
 		shellOutput("Please input Y/N: ");
 	}
 }
+
+void shellExit()
+{
+	//等待shell通知simdisk可以使用共享内存
+	while (!pMapBuffer->ifSimdisk);
+
+	//清空内容
+	pMapBuffer->clearContents();
+
+	strcpy_s(pMapBuffer->contents, "exit");
+	pMapBuffer->ifSimdisk = false;
+	pMapBuffer->ifNeedInput = false;
+	pMapBuffer->ifShell = true; //通知shell可以使用
+}

@@ -3,7 +3,7 @@
 bool writeSystemData()
 {
 	shellOutput("\nWriting system data to virtual disk...\n");
-	fsVirtualDisk.open(VIRTUAL_DISK, std::ios::out | std::ios::binary);
+	fsVirtualDisk.open(VIRTUAL_DISK, std::ios::out | std::ios::binary | std::ios::in);
 
 	if (!fsVirtualDisk.is_open())
 	{
@@ -101,6 +101,7 @@ void writeSpecifiedInfo(InfoType infoType)
 	if (!fsVirtualDisk.is_open())
 	{
 		shellOutput("Virtual disk not found!\nExit System\n");
+		shellExit();
 		exit(1);
 	}
 
@@ -143,6 +144,7 @@ void writeSpecifiedInfo(const int st, const int num, InfoType infoType)
 	if (!fsVirtualDisk.is_open())
 	{
 		shellOutput("Virtual disk not found!\nExit System\n");
+		shellExit();
 		exit(1);
 	}
 
@@ -183,6 +185,7 @@ void writeSpecifiedInfo(const uint addr, Directory& targetDir)
 	if (!fsVirtualDisk.is_open())
 	{
 		shellOutput("Virtual disk not found!\nExit System\n");
+		shellExit();
 		exit(1);
 	}
 
@@ -198,6 +201,7 @@ void writeSpecifiedInfo(const uint addr, const char targetFile[])
 	if (!fsVirtualDisk.is_open())
 	{
 		shellOutput("Virtual disk not found!\nExit System\n");
+		shellExit();
 		exit(1);
 	}
 
@@ -213,6 +217,7 @@ void readSpecifiedInfo(const uint addr, Directory& targetDir)
 	if (!fsVirtualDisk.is_open())
 	{
 		shellOutput("Virtual disk not found!\nExit System\n");
+		shellExit();
 		exit(1);
 	}
 
@@ -228,6 +233,7 @@ void readSpecifiedInfo(const uint addr, const int fileSize, char targetFile[])
 	if (!fsVirtualDisk.is_open())
 	{
 		shellOutput("Virtual disk not found!\nExit System\n");
+		shellExit();
 		exit(1);
 	}
 

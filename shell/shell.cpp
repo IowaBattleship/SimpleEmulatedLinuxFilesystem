@@ -93,11 +93,11 @@ int main()
 
 			pMapBuffer->clearContents();
 			strcpy_s(pMapBuffer->contents, MAX_CONTENT_LEN, cmd);
-
-			if (!strcmp(cmd, "exit"))
-				ifExit = true;
 		}
 		//输出
+		//exit命令
+		else if (!strcmp(pMapBuffer->contents, "exit"))
+			ifExit = true;
 		else
 			std::cout << pMapBuffer->contents;
 

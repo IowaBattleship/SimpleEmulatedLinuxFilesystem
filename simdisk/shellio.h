@@ -14,3 +14,6 @@ void shellOutput(std::string str);
 
 //专门处理Y/N的输入
 bool shellInputYN();
+
+//通知shell退出
+void shellExit();
